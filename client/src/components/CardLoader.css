@@ -1,0 +1,17 @@
+#card-loader-spinner {
+  height: 120px;
+  width: 120px;
+  border: 6px solid;
+  border-color: black transparent black transparent; /* Ensure the transparent sections are visible */
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

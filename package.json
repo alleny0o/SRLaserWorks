@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "server": "node server/index.js",
-    "client": ""
+    "client": "npm run start --prefix client",
+    "app": "concurrently npm \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",

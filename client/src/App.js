@@ -1,7 +1,8 @@
+import ProductScreen from "./screens/ProductScreen";
+
 function App() {
   return (
-    <div className="App">
-    </div>
+    <ProductScreen />
   );
 }
 
