@@ -10,3 +10,12 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.icon-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+}

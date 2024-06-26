@@ -1,3 +1,5 @@
+/* ProductScreen.css */
+
 #sr-product-screen {
   width: 100%;
   min-height: 100vh;
@@ -82,4 +84,31 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 30px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.pagination button {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  background-color: white;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  background-color: #f0f0f0;
+}
+
+.pagination span {
+  padding: 0 10px;
 }
