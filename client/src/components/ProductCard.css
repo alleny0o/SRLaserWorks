@@ -13,11 +13,10 @@
 
 #sr-product-loader-card {
   width: 100%;
-  height: 100%;
+  height: 317px;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 300px; /* Slightly increased for better proportion */
 }
 
 #sr-product-card:hover {
