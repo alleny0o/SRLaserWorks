@@ -5,7 +5,7 @@ import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, O
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Root />}>
-      <Route index element={<ProductScreen />} />
+      <Route path='shop' element={<ProductScreen />} />
     </Route>
   )
 );

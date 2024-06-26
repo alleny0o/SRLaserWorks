@@ -3,6 +3,23 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  height: 100%;
+  width: 1200px; /* Keep the width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  color: black;
 }
 
 .truncate-text {
