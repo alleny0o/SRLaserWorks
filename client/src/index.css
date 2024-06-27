@@ -9,8 +9,9 @@
 
 .container {
   height: 100%;
-  width: 1200px; /* Keep the width */
+  max-width: 1200px; /* Keep the width */
   margin: 0 auto; /* Center horizontally */
+  padding: 0 40px;
 }
 
 html {

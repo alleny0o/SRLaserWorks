@@ -1,24 +1,29 @@
-
-
+/* HEADER STYLES */
 #sr-header-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 80px;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #sr-header-page .inner-header {
   height: 100%;
   width: 100%;
-  display: flex; /* Add flex display to center children */
-  align-items: center; /* Vertical alignment */
-  justify-content: center; /* Horizontal alignment */
-}
-
-
-#sr-header-page .menu-bar {
-  display: none;
 }
 
 #sr-header-page .inner-header .wrap {
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sr-header-page .menu-bar {
+  display: none;
 }
 
 #sr-header-page .inner-header :where(.wrap, .menu > ul),
@@ -96,9 +101,79 @@
   border-radius: 50%;
 }
 
+@media only screen and (max-width: 992px) {
+  #sr-header-page .header-center nav {
+    display: none;
+  }
 
+  #sr-header-page .header-left .list-inline {
+    display: none;
+  }
 
+  #sr-header-page .menu-bar {
+    display: block;
+  }
 
-@media only screen and (max-width: 1300px) {
-  
+  #sr-header-page .menu-bar i {
+    font-size: 20px;
+  }
+}
+
+/* SEARCH STYLES */
+
+#search-float {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.search-input {
+  width: 100%;
+  height: 50px;
+  padding: 0 50px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  outline: none;
+}
+
+.search-icon,
+.close-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.search-icon {
+  left: 23px;
+}
+
+.close-icon {
+  right: 30px;
 }

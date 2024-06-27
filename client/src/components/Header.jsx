@@ -91,6 +91,19 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <div id="search-float" className="search-float">
+          <div className="container wide">
+            <form className="search-form">
+            <i className="fas fa-search search-icon"></i>
+              <input
+                type="search"
+                className="search-input"
+                placeholder="Search products..."
+              />
+              <i className="fa-solid fa-xmark close-icon"></i>
+            </form>
+          </div>
+        </div>
       </header>
 
       {/* {favoritesToggled ? (
