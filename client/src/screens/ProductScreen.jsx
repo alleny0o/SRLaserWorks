@@ -40,6 +40,17 @@ const ProductScreen = () => {
               <option value="price-desc">Price: Highest to Lowest</option>
               <option value="newest">Newest</option>
             </select>
+            <div className="filter">
+            <p>Filter by: </p>
+            <select name="" id="">
+              <option value="all-products" default>
+                All Products
+              </option>
+              <option value="price-asc">Price: Lowest to Highest</option>
+              <option value="price-desc">Price: Highest to Lowest</option>
+              <option value="newest">Newest</option>
+            </select>
+            </div>
           </div>
           {!favoritesToggled && (
             <Pagination

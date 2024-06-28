@@ -3,18 +3,20 @@ import CardLoader from "./CardLoader";
 import { useSelector, useDispatch } from "react-redux";
 import { MdOutlineFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
 import { removeFromFavorites, addToFavorites } from "../redux/actions/productActions";
+import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ product, loading }) => {
 
   const { favorites } = useSelector((state) => state.product);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return loading ? (
     <div id="sr-product-loader-card">
       <CardLoader />
     </div>
   ) : (
-    <div id="sr-product-card">
+    <div id="sr-product-card" onClick={() => navigate(`/product/${product._id}`)}>
       <div className="product-image-container">
         <img src={product.images[0]} alt="Product Image" />
         <div>

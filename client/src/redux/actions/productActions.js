@@ -5,6 +5,7 @@ import {
   setPagination,
   setFavorites,
   setFavoritesToggle,
+  setProduct,
 } from "../slices/product";
 import axios from "axios";
 
@@ -27,6 +28,24 @@ export const getProducts = (page, favoriteToggle) => async (dispatch) => {
     );
   }
 };
+
+export const getProduct = (id) => async (dispatch) => {
+  dispatch(setLoading());
+  try {
+    const { data } = await axios.get(`/api/products/${id}`);
+    dispatch(setProduct(data.product));
+  } catch (error) {
+    dispatch(
+      setError(
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+          ? error.message
+          : "An unexpected error occurred... Please try again later."
+      )
+    );
+  }
+}
 
 export const addToFavorites = (id) => async (dispatch, getState) => {
   const {

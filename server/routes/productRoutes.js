@@ -20,7 +20,19 @@ const getProducts = async (req, res) => {
   }
 };
 
+const getProduct = async (req, res) => {
+  const product = await Product.findById(req.params.id);
+
+  if (product) {
+    return res.json({product});
+  } else {
+    res.status(404);
+    throw new Error('Product not found');
+  }
+}
+
 router.route('/:page/:perPage').get(getProducts);
 router.route('/').get(getProducts);
+router.route('/:id').get(getProduct);
 
 export default router;

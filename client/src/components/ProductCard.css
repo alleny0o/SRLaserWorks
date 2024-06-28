@@ -135,3 +135,9 @@
 #sr-product-card:hover .product-image-container div p {
   margin: 0; /* Align text properly in the center */
 }
+
+@media only screen and (max-width: 840px) {
+  #sr-product-card {
+    max-width: 270px; 
+  }
+}

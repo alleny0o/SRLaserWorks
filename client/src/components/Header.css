@@ -117,11 +117,12 @@
   #sr-header-page .menu-bar i {
     font-size: 20px;
   }
+
 }
 
 /* SEARCH STYLES */
 
-#search-float {
+.search-float.active {
   position: fixed;
   top: 0;
   left: 0;
@@ -130,6 +131,11 @@
   z-index: 1000;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display:block !important;
+}
+
+.search-float {
+  display: none;
 }
 
 .search-form {
@@ -140,7 +146,6 @@
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  box-sizing: border-box;
 }
 
 .search-input {
@@ -176,4 +181,21 @@
 
 .close-icon {
   right: 30px;
+}
+
+/* OVERLAY STYLES */
+
+.overlay {
+  position: fixed;
+  opacity: 0.6;
+  background-color: rgb(91, 91, 91);
+  height: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
 }
