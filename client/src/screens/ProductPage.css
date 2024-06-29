@@ -99,7 +99,20 @@
 }
 
 .product-page .main-image {
+  position: relative;
   margin-left: 70px;
+}
+
+.product-page .main-image.mobile {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-page .main-image.mobile::-webkit-scrollbar {
+  display: none;
 }
 
 .product-page .main-image img {
@@ -108,21 +121,52 @@
   display: block;
 }
 
+.product-page .main-image.mobile img {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.product-page .carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.product-page .carousel-button.prev {
+  left: 10px;
+}
+
+.product-page .carousel-button.next {
+  right: 10px;
+}
+
 .product-page .product-details {
   flex-basis: 40%;
   padding-left: 20px;
 }
 
 .product-page .dots-container {
-  display: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .product-page .dot {
-  width: 8px;
-  height: 8px;
-  background-color: black;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
   border-radius: 50%;
+  margin: 0 5px;
   cursor: pointer;
+}
+
+.product-page .dot.active {
+  background-color: #333;
 }
 
 /* Product Details */
@@ -191,6 +235,12 @@
 }
 
 /* Responsive Styles */
+@media only screen and (min-width: 451px) {
+  .product-page .dots-container {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1025px) {
   .product-page .breadcrumb__list {
     justify-content: center;
@@ -241,25 +291,24 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .product-page .product-display {
+    width: 100%;
+  }
+
   .product-page .thumbnail-images {
     display: none;
   }
 
-  .product-page .dots-container {
-    display: block;
-  }
-
   .product-page .main-image {
     margin-left: 0;
-    display: flex;
-    flex-direction: column;
   }
 
-  .product-page .dots-container {
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    column-gap: 17px;
+  .product-page .carousel-button {
+    display: none;
+  }
+
+  .product-page .main-image img {
+    min-width: 100%;
   }
 
   .product-page .product-page__container {
